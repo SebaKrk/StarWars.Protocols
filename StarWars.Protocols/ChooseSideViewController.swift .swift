@@ -14,7 +14,7 @@ class ChooseSideViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-//    Rectangle
+    
     var chooseButton : UIButton = {
         var button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named:"Rectangle"), for: .normal)
@@ -22,9 +22,10 @@ class ChooseSideViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
         button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        
+        button.addTarget(self, action: #selector(handleChooseButton), for: .touchUpInside)
         return button
     }()
+    
     
     
     override func viewDidLoad() {
@@ -46,11 +47,11 @@ class ChooseSideViewController: UIViewController {
         view.addSubview(chooseButton)
         chooseButton.translatesAutoresizingMaskIntoConstraints = false
         chooseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        chooseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        
-        
-
+        chooseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 250).isActive = true
+    }
+    
+    @objc func handleChooseButton() {
+        print("chose")
     }
 }
 
