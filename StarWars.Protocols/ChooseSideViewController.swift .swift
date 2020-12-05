@@ -12,9 +12,16 @@ class ChooseSideViewController: UIViewController {
     var mainView : UIImageView = {
         var imageView = UIImageView(image: #imageLiteral(resourceName: "starwars1"))
         imageView.contentMode = .scaleAspectFit
-//        imageView.adjustsImageSizeForAccessibilityContentSizeCategory = false
         return imageView
     }()
+//    Rectangle
+    var chooseButton : UIButton = {
+        var button = UIButton(type: .system)
+        button.backgroundColor = .red
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        return button
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +36,11 @@ class ChooseSideViewController: UIViewController {
         
         view.addSubview(mainView)
         mainView.translatesAutoresizingMaskIntoConstraints = false
-        
         mainView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         mainView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        view.addSubview(chooseButton)
+        
         
 
     }
