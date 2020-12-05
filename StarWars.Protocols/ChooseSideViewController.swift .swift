@@ -17,8 +17,12 @@ class ChooseSideViewController: UIViewController {
 //    Rectangle
     var chooseButton : UIButton = {
         var button = UIButton(type: .system)
-        button.backgroundColor = .red
+        button.setBackgroundImage(UIImage(named:"Rectangle"), for: .normal)
+        button.setTitle("chose a side", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
         button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
         return button
     }()
     
@@ -40,6 +44,10 @@ class ChooseSideViewController: UIViewController {
         mainView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         view.addSubview(chooseButton)
+        chooseButton.translatesAutoresizingMaskIntoConstraints = false
+        chooseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        chooseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
         
         
 
