@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         button.setImage(UIImage(named: "starWarslogo")?.withRenderingMode(.alwaysOriginal), for: .normal)
         button.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleLogoButon), for: .touchUpInside)
         return button
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,15 @@ class ViewController: UIViewController {
         logoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         logoButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
         logoButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+    }
+    
+//    MARK: - OBJC func
+    
+    @objc func handleLogoButon() {
+        
+        let vc = ChooseSideViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
 
