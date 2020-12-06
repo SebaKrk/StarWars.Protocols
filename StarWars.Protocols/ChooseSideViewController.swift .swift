@@ -10,7 +10,7 @@ import UIKit
 class ChooseSideViewController: UIViewController {
     
     var mainView : UIImageView = {
-        var imageView = UIImageView(image: #imageLiteral(resourceName: "starwars1"))
+        var imageView = UIImageView(image: #imageLiteral(resourceName: "ChooseSide"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -55,9 +55,19 @@ class ChooseSideViewController: UIViewController {
     @objc func handleChooseButton() {
         
         let vc = LightOrDarkViewController()
+        vc.delegate = self
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
         
+    }
+}
+
+extension ChooseSideViewController: LightOrDarkDelegate {
+    func didTapChoice(image: UIImageView, color: UIColor) {
+        self.dismiss(animated: true) {
+            self.mainView = image
+            self.view.backgroundColor = color
+        }
     }
 }
 
