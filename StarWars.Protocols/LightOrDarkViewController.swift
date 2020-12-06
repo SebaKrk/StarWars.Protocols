@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LightOrDarkDelegate {
-    func didTapChoice( image: UIImageView, color: UIColor )
+    func didTapChoice( image: UIImage, color: UIColor )
 }
 
 class LightOrDarkViewController: UIViewController {
@@ -79,14 +79,16 @@ class LightOrDarkViewController: UIViewController {
     @objc func handleLightSideButton() {
         print("You choose light side")
         
-        delegate?.didTapChoice(image: UIImageView(image: #imageLiteral(resourceName: "light")),color: .blue)
+        delegate?.didTapChoice(image: UIImage(named: "light")!, color: .blue)
+        
+        
 
     }
     
     @objc func handleDarkSideButton() {
         print("You choose dark side")
         
-        delegate?.didTapChoice(image: UIImageView(image: #imageLiteral(resourceName: "dark")), color: .red)
+        delegate?.didTapChoice(image: UIImage(named:"dark")!, color: .red)
 
     }
     

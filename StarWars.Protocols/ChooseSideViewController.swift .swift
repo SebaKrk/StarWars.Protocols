@@ -10,7 +10,7 @@ import UIKit
 class ChooseSideViewController: UIViewController {
     
     var mainView : UIImageView = {
-        var imageView = UIImageView(image: #imageLiteral(resourceName: "ChooseSide"))
+        var imageView = UIImageView(image: #imageLiteral(resourceName: "starwars1"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -35,7 +35,7 @@ class ChooseSideViewController: UIViewController {
         
     }
     
-//    MARK: - SetUpViewConstraint
+    //    MARK: - SetUpViewConstraint
     
     func setUpViewConstraint() {
         
@@ -50,7 +50,7 @@ class ChooseSideViewController: UIViewController {
         chooseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 250).isActive = true
     }
     
-//    MARK: - objc func
+    //    MARK: - objc func
     
     @objc func handleChooseButton() {
         
@@ -63,12 +63,11 @@ class ChooseSideViewController: UIViewController {
 }
 
 extension ChooseSideViewController: LightOrDarkDelegate {
-    func didTapChoice(image: UIImageView, color: UIColor) {
+    func didTapChoice(image: UIImage, color: UIColor) {
         self.dismiss(animated: true) {
-            self.mainView = image
+            self.mainView.image = image
             self.view.backgroundColor = color
         }
     }
 }
-
 
