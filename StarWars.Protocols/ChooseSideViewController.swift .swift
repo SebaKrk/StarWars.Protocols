@@ -50,8 +50,14 @@ class ChooseSideViewController: UIViewController {
         chooseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 250).isActive = true
     }
     
+//    MARK: - objc func
+    
     @objc func handleChooseButton() {
-        print("chose")
+        
+        let vc = LightOrDarkViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+        
     }
 }
 
