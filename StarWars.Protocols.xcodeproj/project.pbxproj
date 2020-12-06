@@ -14,6 +14,7 @@
 		93059C73257B580900B41289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93059C72257B580900B41289 /* Assets.xcassets */; };
 		93059C76257B580900B41289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93059C74257B580900B41289 /* LaunchScreen.storyboard */; };
 		93FF80F0257B67B300905B34 /* ChooseSideViewController.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF80EF257B67B300905B34 /* ChooseSideViewController.swift .swift */; };
+		93FF80F4257BBC8500905B34 /* LightOrDarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF80F3257BBC8400905B34 /* LightOrDarkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		93059C75257B580900B41289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93059C77257B580900B41289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93FF80EF257B67B300905B34 /* ChooseSideViewController.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseSideViewController.swift .swift"; sourceTree = "<group>"; };
+		93FF80F3257BBC8400905B34 /* LightOrDarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightOrDarkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				93059C69257B580500B41289 /* AppDelegate.swift */,
 				93059C6B257B580500B41289 /* SceneDelegate.swift */,
+				93FF80F3257BBC8400905B34 /* LightOrDarkViewController.swift */,
 				93FF80EF257B67B300905B34 /* ChooseSideViewController.swift .swift */,
 				93059C6D257B580500B41289 /* ViewController.swift */,
 				93059C6F257B580500B41289 /* Main.storyboard */,
@@ -143,6 +146,7 @@
 				93FF80F0257B67B300905B34 /* ChooseSideViewController.swift .swift in Sources */,
 				93059C6E257B580500B41289 /* ViewController.swift in Sources */,
 				93059C6A257B580500B41289 /* AppDelegate.swift in Sources */,
+				93FF80F4257BBC8500905B34 /* LightOrDarkViewController.swift in Sources */,
 				93059C6C257B580500B41289 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

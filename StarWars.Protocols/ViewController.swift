@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         logoButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
-//    MARK: - OBJC func
+    //    MARK: - objc func
     
     @objc func handleLogoButon() {
         
