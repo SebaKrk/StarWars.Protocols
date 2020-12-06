@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol LightOrDarkDelegate {
+    func didTapChoice( image: UIImageView, color: UIColor )
+}
+
 class LightOrDarkViewController: UIViewController {
+    
+    var delegate: LightOrDarkDelegate?
     
     var lightSideButton: UIButton = {
         let buttton = UIButton(type: .system)
@@ -31,7 +37,6 @@ class LightOrDarkViewController: UIViewController {
         label.font = UIFont(name: "Avenir Next Heavy", size: 40)
         label.textAlignment = .center
         label.textColor = UIColor(displayP3Red: 250, green: 229, blue: 0, alpha: 1)
-//        label.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
         
         return label
     }()
@@ -73,10 +78,16 @@ class LightOrDarkViewController: UIViewController {
     
     @objc func handleLightSideButton() {
         print("You choose light side")
+        
+        delegate?.didTapChoice(image: UIImageView(image: #imageLiteral(resourceName: "light")),color: .blue)
+
     }
     
     @objc func handleDarkSideButton() {
         print("You choose dark side")
+        
+        delegate?.didTapChoice(image: UIImageView(image: #imageLiteral(resourceName: "dark")), color: .red)
+
     }
     
 }
