@@ -13,7 +13,6 @@ class LightOrDarkViewController: UIViewController {
         let buttton = UIButton(type: .system)
         buttton.setBackgroundImage(UIImage(named: "rebel"), for: .normal)
         
-        
         buttton.addTarget(self, action: #selector(handleLightSideButton), for: .touchUpInside)
         return buttton
     }()
@@ -22,9 +21,19 @@ class LightOrDarkViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named: "imperial"), for: .normal)
         
-        
         button.addTarget(self, action: #selector(handleDarkSideButton), for: .touchUpInside)
         return button
+    }()
+    
+    var titleLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Chose Your Side"
+        label.font = UIFont(name: "Avenir Next Heavy", size: 40)
+        label.textAlignment = .center
+        label.textColor = UIColor(displayP3Red: 250, green: 229, blue: 0, alpha: 1)
+//        label.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
+        
+        return label
     }()
     
     
@@ -32,6 +41,10 @@ class LightOrDarkViewController: UIViewController {
         super.viewDidLoad()
         
         setUpViewConstraint()
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     //    MARK: - SetUpViewConstraint
@@ -45,12 +58,15 @@ class LightOrDarkViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
+        stackView.setCustomSpacing(50, after: lightSideButton)
+        
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90)
         ])
+
     }
     
     //    MARK: - objc func
