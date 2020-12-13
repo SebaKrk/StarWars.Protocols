@@ -11,7 +11,7 @@ class ChooseSideViewController: UIViewController {
     
     var mainView : UIImageView = {
         var imageView = UIImageView(image: #imageLiteral(resourceName: "starwars1"))
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -21,7 +21,6 @@ class ChooseSideViewController: UIViewController {
         button.setTitle("chose a side", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         button.addTarget(self, action: #selector(handleChooseButton), for: .touchUpInside)
         return button
     }()
@@ -41,8 +40,10 @@ class ChooseSideViewController: UIViewController {
         
         view.addSubview(mainView)
         mainView.translatesAutoresizingMaskIntoConstraints = false
-        mainView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        mainView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        mainView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         view.addSubview(chooseButton)
         chooseButton.translatesAutoresizingMaskIntoConstraints = false

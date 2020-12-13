@@ -79,16 +79,14 @@ class LightOrDarkViewController: UIViewController {
     @objc func handleLightSideButton() {
         print("You choose light side")
         
-        delegate?.didTapChoice(image: UIImage(named: "light")!, color: .blue)
+        delegate?.didTapChoice(image: UIImage(named: "light")!, color: .black)
         
-        
-
     }
     
     @objc func handleDarkSideButton() {
         print("You choose dark side")
         
-        delegate?.didTapChoice(image: UIImage(named:"dark")!, color: .red)
+        delegate?.didTapChoice(image: UIImage(named:"dark")!, color: .black)
 
     }
     
