@@ -13,6 +13,8 @@
 		93059C71257B580500B41289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93059C6F257B580500B41289 /* Main.storyboard */; };
 		93059C73257B580900B41289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93059C72257B580900B41289 /* Assets.xcassets */; };
 		93059C76257B580900B41289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93059C74257B580900B41289 /* LaunchScreen.storyboard */; };
+		93678BFA2628494700EB8DA5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678BF92628494700EB8DA5 /* TestViewController.swift */; };
+		93678BFD26284A4100EB8DA5 /* Test2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678BFC26284A4100EB8DA5 /* Test2VC.swift */; };
 		93FF80F0257B67B300905B34 /* ChooseSideViewController.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF80EF257B67B300905B34 /* ChooseSideViewController.swift .swift */; };
 		93FF80F4257BBC8500905B34 /* LightOrDarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF80F3257BBC8400905B34 /* LightOrDarkViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		93059C72257B580900B41289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93059C75257B580900B41289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93059C77257B580900B41289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93678BF92628494700EB8DA5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		93678BFC26284A4100EB8DA5 /* Test2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2VC.swift; sourceTree = "<group>"; };
 		93FF80EF257B67B300905B34 /* ChooseSideViewController.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseSideViewController.swift .swift"; sourceTree = "<group>"; };
 		93FF80F3257BBC8400905B34 /* LightOrDarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightOrDarkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,8 @@
 				93FF80F3257BBC8400905B34 /* LightOrDarkViewController.swift */,
 				93FF80EF257B67B300905B34 /* ChooseSideViewController.swift .swift */,
 				93059C6D257B580500B41289 /* ViewController.swift */,
+				93678BF92628494700EB8DA5 /* TestViewController.swift */,
+				93678BFC26284A4100EB8DA5 /* Test2VC.swift */,
 				93059C6F257B580500B41289 /* Main.storyboard */,
 				93059C72257B580900B41289 /* Assets.xcassets */,
 				93059C74257B580900B41289 /* LaunchScreen.storyboard */,
@@ -144,9 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				93FF80F0257B67B300905B34 /* ChooseSideViewController.swift .swift in Sources */,
+				93678BFD26284A4100EB8DA5 /* Test2VC.swift in Sources */,
 				93059C6E257B580500B41289 /* ViewController.swift in Sources */,
 				93059C6A257B580500B41289 /* AppDelegate.swift in Sources */,
 				93FF80F4257BBC8500905B34 /* LightOrDarkViewController.swift in Sources */,
+				93678BFA2628494700EB8DA5 /* TestViewController.swift in Sources */,
 				93059C6C257B580500B41289 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

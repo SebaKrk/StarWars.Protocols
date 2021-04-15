@@ -43,7 +43,8 @@ class ViewController: UIViewController {
     
     @objc func handleLogoButon() {
         
-        let vc = ChooseSideViewController()
+//        let vc = ChooseSideViewController()
+        let vc = TestViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
